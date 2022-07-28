@@ -1,9 +1,9 @@
-import React from "react";
-import useGithub from "../../hooks/github-hooks";
-import * as S from "./styled";
+import React from 'react'
+import useGithub from '../../hooks/github-hooks'
+import * as S from './styled'
 
 const Profile = () => {
-  const { githubState } = useGithub();
+  const { githubState } = useGithub()
 
   return (
     <S.Wrapper>
@@ -56,7 +56,7 @@ const Profile = () => {
         </S.WrapperStatusCount>
       </S.WrapperInfoUser>
     </S.Wrapper>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

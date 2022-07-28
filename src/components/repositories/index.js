@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import useGithub from "../../hooks/github-hooks";
-import RepositoryItem from "../repository-item";
-import * as S from "./styled";
+import React, { useEffect, useState } from 'react'
+import useGithub from '../../hooks/github-hooks'
+import RepositoryItem from '../repository-item'
+import * as S from './styled'
 
 const Repositories = () => {
-  const { githubState, getUserRepos, getUserStarred } = useGithub();
-  const [hasUserForSearchrepos, setHasUserForSearchrepos] = useState(false);
+  const { githubState, getUserRepos, getUserStarred } = useGithub()
+  const [hasUserForSearchrepos, setHasUserForSearchrepos] = useState(false)
 
   useEffect(() => {
     if (githubState.user.login) {
-      getUserRepos(githubState.user.login);
-      getUserStarred(githubState.user.login);
+      getUserRepos(githubState.user.login)
+      getUserStarred(githubState.user.login)
     }
-    setHasUserForSearchrepos(githubState.repositories);
+    setHasUserForSearchrepos(githubState.repositories)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [githubState.user.login]);
+  }, [githubState.user.login])
 
   return (
     <>
@@ -30,7 +30,7 @@ const Repositories = () => {
           </S.WrapperTabList>
           <S.WrapperTabPanel>
             <S.WrapperList>
-              {githubState.repositories.map((item) => (
+              {githubState.repositories.map(item => (
                 <RepositoryItem
                   key={item.id}
                   name={item.name}
@@ -42,7 +42,7 @@ const Repositories = () => {
           </S.WrapperTabPanel>
           <S.WrapperTabPanel>
             <S.WrapperList>
-              {githubState.starred.map((item) => (
+              {githubState.starred.map(item => (
                 <RepositoryItem
                   key={item.id}
                   name={item.name}
@@ -57,7 +57,7 @@ const Repositories = () => {
         <></>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Repositories;
+export default Repositories

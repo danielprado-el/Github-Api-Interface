@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
-`;
+`
 
 export const WrapperInfoUser = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin-left: 8px;
   height: 200px;
+  margin-left: 8px;
 
   h1 {
     font-size: 32px;
@@ -27,7 +27,7 @@ export const WrapperInfoUser = styled.div`
     font-size: 16px;
     font-weight: bold;
   }
-`;
+`
 
 export const WrapperStatusCount = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ export const WrapperStatusCount = styled.div`
     margin: 8px;
     text-align: center;
   }
-`;
+`
 
 export const WrapperUserGeneric = styled.div`
   display: flex;
@@ -49,13 +49,14 @@ export const WrapperUserGeneric = styled.div`
 
   a {
     font-size: 18px;
-    color: blue;
+    color: purple;
     font-weight: bold;
   }
-`;
+`
 
 export const WrapperImage = styled.img`
   border-radius: 50%;
+  border: solid 3px purple;
   width: 200px;
   margin: 8px;
-`;
+`

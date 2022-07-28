@@ -1,5 +1,5 @@
-import React from "react";
-import * as S from "./styled";
+import React from 'react'
+import * as S from './styled'
 
 const RepositoryItem = ({ name, linkToRepo, fullName }) => {
   return (
@@ -10,7 +10,7 @@ const RepositoryItem = ({ name, linkToRepo, fullName }) => {
         {fullName}
       </S.WrapperLink>
     </S.Wrapper>
-  );
-};
+  )
+}
 
-export default RepositoryItem;
+export default RepositoryItem
